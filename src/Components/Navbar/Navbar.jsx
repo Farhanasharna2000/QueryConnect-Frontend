@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import {  signOut } from "firebase/auth";
 import { auth } from "../../Firebase/firebase.config";
+import { useAuth } from "../../AuthContext/AuthContext";
 
 const Navbar = () => {
-  const [user, setUser] = useState(null); 
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
+ const { user } = useAuth();
 
   const handleLogout = async () => {
     try {

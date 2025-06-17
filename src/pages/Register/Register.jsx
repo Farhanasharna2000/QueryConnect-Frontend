@@ -5,6 +5,7 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../Firebase/firebase.config";
+import axios from "axios";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -26,11 +27,22 @@ export default function Register() {
 
     setLoading(true);
     try {
+    
       const userCred = await createUserWithEmailAndPassword(auth, email, password);
+
+      // Update profile
       await updateProfile(userCred.user, {
         displayName: name,
         photoURL: photoURL,
       });
+
+      // 3. Save user to DB
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, {
+        name,
+        email,
+        photoURL,
+      });
+
       navigate("/dashboard");
     } catch (err) {
       setErrorMsg(err.message);
