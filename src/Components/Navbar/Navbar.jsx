@@ -57,7 +57,7 @@ const Navbar = () => {
               )}
             </ul>
           </div>
-          <Link to="/" className="md:text-2xl text-xl text-[#7C3AED] uppercase font-black">
+          <Link to="/" className="md:text-3xl text-xl text-[#7C3AED] uppercase font-black">
             AskZone
           </Link>
         </div>

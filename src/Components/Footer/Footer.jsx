@@ -7,7 +7,7 @@ const Footer = () => {
         
         {/* About */}
         <div>
-          <h4 className="md:text-2xl text-xl uppercase font-black mb-3">QueryConnect</h4>
+          <h4 className="md:text-4xl text-2xl uppercase font-black mb-3">QueryConnect</h4>
           <p className="text-sm">
             QueryConnect is a collaborative Q&A platform to ask, answer, and grow knowledge together.
           </p>
