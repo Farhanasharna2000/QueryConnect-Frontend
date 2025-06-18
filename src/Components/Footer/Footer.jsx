@@ -2,12 +2,12 @@ import { FaFacebookF, FaTwitter, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-100 py-10 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-3 text-center md:text-left">
+    <footer className="bg-gray-900 text-gray-300 py-10 ">
+      <div className=" text-center space-y-2 px-5">
         
         {/* About */}
         <div>
-          <h4 className="text-xl font-semibold mb-3">QueryConnect</h4>
+          <h4 className="md:text-2xl text-xl uppercase font-black mb-3">QueryConnect</h4>
           <p className="text-sm">
             QueryConnect is a collaborative Q&A platform to ask, answer, and grow knowledge together.
           </p>
@@ -15,17 +15,15 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h4 className="text-xl font-semibold mb-3">Contact</h4>
-          <p className="text-sm flex items-center justify-center md:justify-start gap-2">
-            <FaEnvelope className="text-blue-500" />
+          <p className="text-sm flex items-center justify-center  gap-2">
+            <FaEnvelope className="text-blue-500 " />
             support@QueryConnect.com
           </p>
         </div>
 
         {/* Social Links */}
         <div>
-          <h4 className="text-xl font-semibold mb-3">Follow Us</h4>
-          <div className="flex gap-4 justify-center md:justify-start">
+          <div className="flex gap-4 justify-center">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF className="text-blue-500 hover:text-blue-400 text-lg" />
             </a>
