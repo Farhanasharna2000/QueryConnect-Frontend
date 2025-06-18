@@ -24,9 +24,9 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-white md:py-20 py-10 px-5 md:px-0 container mx-auto ">
+    <section className=" md:py-20 py-10 px-5 md:px-0 container mx-auto ">
       <div className=" text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+        <h2 className="md:text-4xl text-2xl font-bold mb-10">
           What Our <span className="text-[#7C3AED]">Users Say</span>
         </h2>
 
